@@ -1,0 +1,37 @@
+site_name: Design ex Machina
+
+theme:
+  name: material
+  palette:
+    scheme: dem
+  custom_dir: overrides
+  features:
+    - content.code.annotate
+  icon:
+    admonition:
+      info: octicons/info-16
+  favicon: images/favicon.png
+  logo: images/logo.png
+
+#ALL THE SECTIONS HERE!!!
+nav:
+  - Home: index.md
+  - Introduction: intro.md
+  - Getting Started: sec1.md
+  - Loops and Conditionals: sec2.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+  - pymdownx.mark
+  - pymdownx.extra
+  - attr_list
+
+extra_css:
+  - assets/stylesheets/extra.css
+  - docs/style.css
+
+extra_javascript:
+  - icons/historybit.svg
