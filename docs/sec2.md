@@ -8,7 +8,7 @@ Finally, let's look at something quite strange at first:
 <iframe src="https://editor.p5js.org/dide_dd/sketches/4D2lw573N" width="800" height="400" frameborder="0"></iframe>
 
 
-How can position be equal to itself plus one? As we saw in the last section, "position" is a variable that holds a value and writing `position = position + 1` is a way to update that value. Therefore, if initially position equals to 20, after the operation it will equal to "20 + 1". This is very useful in programming, especially in loops, just as we will see now.
+How can position be equal to itself plus one? As we saw in the last section, "position" is a variable that holds a value and writing `position = position + 1` is a way to update that value. Therefore, if initially position equals to 20, after the operation it will equal to "20 + 1". Since, as we've seen, the `draw()` function reruns at every frame, the circle will be redrawn at its new position every frame, therefore creating our simple animation. This increase operation is very useful in programming, especially in loops, just as we will see now. 
 
 ## Loops
 
