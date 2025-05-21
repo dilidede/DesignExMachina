@@ -417,7 +417,7 @@
 Finally, let's look at something quite strange at first: </p>
 <iframe src="https://editor.p5js.org/dide_dd/sketches/4D2lw573N" width="800" height="400" frameborder="0"></iframe>
 
-<p>How can position be equal to itself plus one? As we saw in the last section, "position" is a variable that holds a value and writing <code>position = position + 1</code> is a way to update that value. Therefore, if initially position equals to 20, after the operation it will equal to "20 + 1". This is very useful in programming, especially in loops, just as we will see now.</p>
+<p>How can position be equal to itself plus one? As we saw in the last section, "position" is a variable that holds a value and writing <code>position = position + 1</code> is a way to update that value. Therefore, if initially position equals to 20, after the operation it will equal to "20 + 1". Since, as we've seen, the <code>draw()</code> function reruns at every frame, the circle will be redrawn at its new position every frame, therefore creating our simple animation. This increase operation is very useful in programming, especially in loops, just as we will see now. </p>
 <h2 id="loops">Loops</h2>
 <p>Loops are a fundamental concept in programming, as they allow a program to <strong>repeat an action</strong> while or until a specific condition is met. The condition might be a target result (for example filling the whole canvas) or simply repeating an action a set number of times.</p>
 <p>Let’s say we want to create a chain of 20 circles. In pseudocode it might look like this:</p>
@@ -585,16 +585,20 @@ Let’s now assume that we want for all the circles in the top half to be red an
         
       </main>
       
-        <footer style= "padding-left: 20px;" class="md-footer">
-    <div class="md-footer-meta md-typeset">
-      <div class="md-footer-meta__inner">
-        <p>"Design Ex Machina" by Diletta Maria Dell'Utri <br> Prof. Antonino Benincasa and Rocco Lorenzo Modugno <br>
-            Free University of Bolzano, Faculty of Deisgn and Art</p>
-        <p>
-      </div>
+        <footer style="padding-left: 20px;" class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner" style="display: flex; justify-content: space-between; align-items: center;">
+      <p>
+        "Design Ex Machina" by Diletta Maria Dell'Utri <br>
+        Prof. Antonino Benincasa and Rocco Lorenzo Modugno <br>
+        Free University of Bolzano, Faculty of Design and Art
+      </p>
+      <p style="margin-right: 20px;">
+        Made with Materials for MkDocs
+      </p>
     </div>
+  </div>
 </footer>
-  
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
