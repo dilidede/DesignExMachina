@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="../sec1/">
+        <link rel="prev" href="../02interaction/">
       
+      
+        <link rel="next" href="../04integratingAI/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -232,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../00intro/" class="md-nav__link">
         
   
   
@@ -254,12 +256,34 @@
   
   
     <li class="md-nav__item">
-      <a href="../sec1/" class="md-nav__link">
+      <a href="../01gettingStarted/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02interaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interaction
     
   </span>
   
@@ -347,6 +371,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04integratingAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrating Artificial Intelligence
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -439,14 +485,14 @@ Finally, let's look at something quite strange at first: </p>
 <iframe src="https://editor.p5js.org/dide_dd/sketches/R0K9LWHj_" width="800px" height="400px"></iframe>
 
 <p>Now, in your p5 programs it's very likeable you will need to loop through the whole canvas, and in this case a simple loop won't be enough, as you will require coordinates both for the x and the y. How to handle this case? Let's look at the code:</p>
-<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">2</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>What is going on? The program enters in the first loop, then runs the second one until it doesn't meet anymore the condition (i.e. being less than nine), then goes back to the first loop in order to increment the x value and then it runs the second loop. This repeats until the first loop condition is valid. If this sounds a bit too confusing, let's look at it.</p>
-<iframe src="../p5/nestedLoop.html" width="800" height="300" style="border: 2px solid var(--main-orange)"></iframe>
+<iframe src="../p5/nestedLoop.html" width="800" height="500" style="border: 2px solid var(--main-orange)"></iframe>
 
 <h2 id="conditionals">Conditionals</h2>
 <p>Conditionals are another fundamental concept in programming, as they allow the computer to executer different actions depending on whether a condition is true or false.</p>
@@ -498,7 +544,7 @@ Let’s now assume that we want for all the circles in the top half to be red an
 
     draw a circle where the mouse is
 </code></pre></div>
-<p>Even though this might look complex at first, the basic logic is the same as the one we saw before, we just need one last piece of syntax: else if. This is how our conditional statement will look like: </p>
+<p>Even though this might look complex at first, the basic logic is the same as the one we saw before, we just need one last piece of syntax: else if. This is how our conditional statement will look like::</p>
 <div class="highlight"><pre><span></span><code><span class="c1">//top third</span>
 <span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">mouseY</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="p">(</span><span class="nx">height</span><span class="o">/</span><span class="mf">3</span><span class="p">)</span><span class="o">*</span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nx">fill</span><span class="p">(</span><span class="mf">200</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
@@ -555,14 +601,17 @@ Let’s now assume that we want for all the circles in the top half to be red an
 <div class="admonition exercises">
 <p class="admonition-title">Exercises</p>
 <ol>
-<li>Editing from the <em>02A</em> program from this chapter, make every second circle filled with red.
-    <em>Tip</em>: Use the remainder operation</li>
 <li>Draw triangles in a row. Change the color of a triangle when the mouse is over it.</li>
 <li>Draw a 5x5 grid of squares.
-    3.1. Try to alternate the square colors like in a chessboard
+    2.1. Try to alternate the square colors like in a chessboard
         <em>Tip</em>: Use nested loops.</li>
 </ol>
 </div>
+<ol>
+<li></li>
+<li>Starting from the <em>02A</em> program from this chapter, make every second circle filled with red.
+        <em>Tip</em>: Use the remainder operation</li>
+</ol>
 
 
 

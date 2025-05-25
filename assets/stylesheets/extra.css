@@ -1,9 +1,11 @@
 :root {
   --md-admonition-icon--history-bit: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 40 40'%3E%3C!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141) --%3E%3Cdefs%3E%3Cstyle%3E .st0, .st1 %7B fill: none; stroke: %23231f20; stroke-miterlimit: 10; stroke-width: 3px; %7D .st1 %7B stroke-linecap: round; %7D %3C/style%3E%3C/defs%3E%3Cpath class='st0' d='M17.49,29.39l-7.76-2.74c-1.39-.49-2.51-2.08-2.51-3.55V6.21c0-1.47,1.12-2.26,2.51-1.77l7.76,2.74c1.39.49,2.51,2.08,2.51,3.55v16.88c0,1.47-1.12,2.26-2.51,1.77Z'/%3E%3Cpath class='st0' d='M22.51,29.39l7.76-2.74c1.39-.49,2.51-2.08,2.51-3.55V6.21c0-1.47-1.12-2.26-2.51-1.77l-7.76,2.74c-1.39.49-2.51,2.08-2.51,3.55v16.88c0,1.47,1.12,2.26,2.51,1.77Z'/%3E%3Cpath class='st1' d='M36.58,7.77v23.32c0,1.37-1.18,2.48-2.63,2.48H6.05c-1.45,0-2.63-1.11-2.63-2.48V7.77'/%3E%3C/svg%3E");
   --md-admonition-icon-summary: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' version='1.1' viewBox='0 0 40 40'%3E%3C!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141) --%3E%3Cdefs%3E%3Cstyle%3E .st0 %7B fill: none; stroke: %23231f20; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 3px; %7D %3C/style%3E%3C/defs%3E%3Cline class='st0' x1='4.72' y1='10.42' x2='35.28' y2='10.42'/%3E%3Cline class='st0' x1='4.72' y1='16.92' x2='30.21' y2='16.92'/%3E%3Cline class='st0' x1='4.72' y1='29.93' x2='24.4' y2='29.93'/%3E%3Cline class='st0' x1='4.72' y1='23.43' x2='35.28' y2='23.43'/%3E%3C/svg%3E");
-  --history-violet: #d3519f;
-  --main-orange: rgb(231, 105, 33);
-  --main-pink: #ff80ec;
+  --history: #e4ac32;
+  --history-bg: #fff2de;
+  --main-color: rgb(239, 71, 111);
+  --secondary-color: rgb(127, 176, 105);
+  --codeblocks-bg: #efefef;
 }
 
 /* Font files */
@@ -15,6 +17,16 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'PP Right Grotesk Text';
+  src: url("../fonts/PPRightGroteskText-CompactMedium.woff2") format('woff2'),
+       url("../fonts/PPRightGroteskText-CompactMedium.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 @font-face {
   font-family: 'PP Right Grotesk Mono';
@@ -34,17 +46,39 @@
   font-display: swap;
 }
 
+body {
+  background-color: rgb(255, 255, 250);
+}
+
+
+/* code bg */
+.md-typeset code {
+  background-color: var(--codeblocks-bg); 
+  color: #000;               
+}
+
 /* Header Colors */
 .md-header {
-  background-color: #d274ae !important;
-  color: #ffffff !important;
+  background-color: var(--secondary-color);
+  color: #ffffff;
 }
 
 /* Sidebar Color */
 [data-md-color-scheme="dem"] {
-  --md-primary-fg-color: #d274ae;
-  --md-primary-fg-color--light: rgb(255, 241, 231);
+  --md-primary-fg-color: var(--secondary-color);
+  --md-primary-fg-color--light: rgb(225, 176, 141);
   --md-primary-fg-color--dark:  #a54500;
+}
+
+
+.md-nav__link:hover {
+  color: var(--secondary-color) !important; /* Replace with your desired color */
+}
+
+/* Active link */
+.md-nav__item--active > .md-nav__link {
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
 .md-content .md-typeset h1 {
@@ -53,7 +87,7 @@
   letter-spacing: 2px;
   font-weight: bold;
   font-style: normal;
-  color: var(--main-orange);
+  color: var(--main-color);
 }
 
 .md-content .md-typeset h2 {
@@ -62,7 +96,7 @@
   letter-spacing: 2px;
   font-weight: bold;
   font-style: normal;
-  color: var(--main-orange);
+  color: var(--main-color);
 }
 
 .md-content .md-typeset h3 {
@@ -71,11 +105,11 @@
   letter-spacing: 1px;
   font-weight: bold;
   font-style: normal;
-  color: var(--main-orange);
+  color: var(--main-color);
 }
 
 .md-typeset strong {
-  color: var(--main-orange);
+  color: var(--main-color);
 }
 
 /* Remove icon for Exercises */
@@ -84,10 +118,22 @@
   display: none
 }
 
+.md-nav.md-nav--primary {
+  font-family: 'PP Right Grotesk Text', sans-serif;
+}
+
+.md-nav.md-nav--secondary {
+  font-family: 'PP Right Grotesk Text', sans-serif;
+}
+
+.md-nav__title {
+  display: none;
+}
+
 /* Style for Exercises */
 .md-typeset .admonition.exercises {
   border: none;
-  background-color: #fff1e7;
+  background-color: #ffecec;
   padding: 1em;
   border-radius: 6px;
   font-family: 'PP Right Grotesk Text', sans-serif;
@@ -99,7 +145,7 @@
   background-color: transparent !important;
   font-weight: bold;
   font-size: 1.2em;
-  color: var(--main-orange);
+  color: var(--main-color);
   font-family: 'PP Right Grotesk Mono', monospace;
 }
 
@@ -107,11 +153,11 @@
 .md-typeset .history-bit > .admonition-title,
 .md-typeset .history-bit > summary {
   background-color: rgba(43, 155, 70, 0.1);
-  border-color: var(--history-violet); 
+  border-color: var(--history); 
 }
 .md-typeset .history-bit > .admonition-title::before,
 .md-typeset .history-bit > summary::before {
-  background-color: var(--history-violet);
+  background-color: var(--history);
   -webkit-mask-image: var(--md-admonition-icon--history-bit);
           mask-image: var(--md-admonition-icon--history-bit);
 }
@@ -119,8 +165,8 @@
 /* Style for History Bit */
 .md-typeset .admonition.history-bit {
   border: none;
-  border-left: 4px solid var(--history-violet);
-  background-color: #ffe9f3;
+  border-left: 4px solid var(--history);
+  background-color: var(--history-bg);
   padding: 1em;
   border-radius: 6px;
   font-family: 'PP Right Grotesk Text', sans-serif;
@@ -132,7 +178,7 @@
   background-color: transparent !important;
   font-weight: bold;
   font-size: 1.2em;
-  color: var(--history-violet);
+  color: var(--history);
   font-family: 'PP Right Grotesk Mono', monospace;
 }
 
@@ -140,7 +186,7 @@
 .md-typeset .summary > .admonition-title,
 .md-typeset .summary > summary {
   background-color: rgba(43, 155, 70, 0.1);
-  border-color: rgb(226, 91, 91); 
+  border-color: #e25b5b; 
 }
 .md-typeset .summary > .admonition-title::before,
 .md-typeset .summary > summary::before {
@@ -165,13 +211,13 @@
   background-color: transparent !important;
   font-weight: bold;
   font-size: 1.2em;
-  color: rgb(226, 91, 91);
+  color: lch(56.49% 59.29 27.5);
   font-family: 'PP Right Grotesk Mono', monospace;
 }
 
 /* Footer settings*/
 .md-footer {
-  background-color: var(--main-pink);
+  background-color: var(--main-color2);
   color: white;
   text-align: left;
   padding: 1em 0;
@@ -179,7 +225,7 @@
 
 .md-footer,
 .md-footer-meta {
-  background-color: #d274ae !important;
+  background-color: var(--secondary-color) !important;
   color: white;
 }
 

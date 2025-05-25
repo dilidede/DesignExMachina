@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../intro/">
+        <link rel="prev" href="../00intro/">
       
       
-        <link rel="next" href="../sec2/">
+        <link rel="next" href="../02interaction/">
       
       
       <link rel="icon" href="../images/favicon.png">
@@ -234,7 +234,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../intro/" class="md-nav__link">
+      <a href="../00intro/" class="md-nav__link">
         
   
   
@@ -365,12 +365,56 @@
   
   
     <li class="md-nav__item">
-      <a href="../sec2/" class="md-nav__link">
+      <a href="../02interaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interaction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03loopsConds/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Loops and Conditionals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04integratingAI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrating Artificial Intelligence
     
   </span>
   
@@ -467,6 +511,8 @@
 
 
 
+<iframe src="../p5/gettingStarted.html" width="800" height="200" style="border: 2px solid var(--main-color)"></iframe>
+
 <h1 id="getting-started">Getting Started</h1>
 <h2 id="what-is-programming">What is programming?</h2>
 <p>Programming is the action of giving a computer <strong>a set of instructions</strong> in the form of code, which follows a precise syntax based on the language we’re using, which in our case will be <strong>JavaScript</strong>. Humans communicate with each other through <strong>natural language</strong>, like English or Italian, which allows some interpretation in it, even though we don’t notice that. For example, “Put the book on the table in the bedroom”, that could either mean “Move the book from the table to the bedroom” or “Move the book on the table that is in the bedroom” and we as humans are able to understand what the sentence means based on the context. A computer is not able to do that, we must always explain to it exactly what it needs to do through a <strong>programming language</strong>.</p>
@@ -526,11 +572,12 @@ Any p5 code will have a variable number of <strong>functions</strong> in it, but
 </code></pre></div>
 <p>If we try to run it, a simple gray square will appear on the side of the screen. What has happened? The instruction, called call, in the setup function was <code>createCanvas(400, 400)</code>, where <code>createCanvas</code> is the name of the command and the numbers inside the parentheses are the settings of our command. Almost every command in p5 will be followed by parentheses, which are filled with the precise settings, which are called arguments, that we need to give it. When we see (or write) nothing inside the parentheses it’s because we’re okay with the default settings it has, which are not shown. Attention though, not every function is able to work without explicit parameters. For example, <code>createCanvas</code> needs as parameters a width and height to function properly, if we just write <code>createCanvas()</code> the command will take as width and height 0, which means it will create a 0x0 px canvas, therefore a useless one. In our sample code both the height and width are defined to be 400, which explains the reason why our canvas is a square. Why the gray though?
 The second function of the program is draw, which contains a simple statement: <code>background(220)</code>. It’s telling the computer to draw the program with a specific color, and it can take different kinds of parameters. If we only write one number, we will be using a shade of gray, while if we write three numbers, those will be RGB values. In our case we only have a number as an argument, which means it’s taking 220 as the grayscale value for the background, this explains the gray color of the square.</p>
-<p>::: Summary
-Function: a command, it contains a series of instructions in the form of calls.
-Call: specific instruction to be executed
-Argument: specific settings of a command, contained in circle brackets. 
-:::</p>
+<div class="admonition summary">
+<p class="admonition-title">Summary</p>
+<p>Function: a command, it contains a series of instructions in the form of calls. <br>
+Call: specific instruction to be executed. <br>
+Argument: specific settings of a command, contained in circle brackets. <br></p>
+</div>
 <p>Let’s try and make this more interesting. First, let's setup our background just after creating the canvas, without having to re-draw it at every frame. What to do now in the draw function? Try to run this code and to pass your mouse on the canvas:</p>
 <iframe src="https://editor.p5js.org/dide_dd/sketches/UrdkMc0ZW" width="800px" height="600px"></iframe>
 
@@ -656,9 +703,14 @@ Usually all “load” calls for loading assets are used in a special kind of fu
 <div class="admonition exercises">
 <p class="admonition-title">Exercises</p>
 <ol>
-<li>Bla bla</li>
-<li>Bla Bla</li>
-<li>Bla</li>
+<li>
+<p>Write pseudocode to draw a traffic light with red, yellow, and green lights in the correct order vertically. <br>
+<em>Tip</em>: Think of shapes, positions, and repetition.</p>
+</li>
+<li>
+<p>Modify the sample p5.js sketch to create a canvas of size 600x300 and set the background to light gray and try to realise the traffic light in p5. <br>
+<em>Tip</em>: Use <code>circle()</code> function.</p>
+</li>
 </ol>
 </div>
 

@@ -1,24 +1,26 @@
-let noiseLevel = 40;
-let noiseScale = 0.03;
+let noiseLevel = 60;
+let noiseScale = 0.02;
 let circleCounter = 0;
 let direction = 1;
 
 function setup() {
   createCanvas(800, 400);
+  frameRate(12);
 }
 
 function draw(){
     background(255)
-    noiseLevel += 0.2 * direction;
+    noiseLevel += 0.3 * direction;
     circleCounter = 0
     let dist_from_mouse = 40;
-    let stepSize = 5;
+    let stepSize = 20;
 
-    for (let y = 0; y < height; y += stepSize) {
-        for (let x = 0; x < width; x += stepSize) {
+    for (let y = stepSize; y < height; y += stepSize) {
+        for (let x = stepSize; x < width; x += stepSize) {
+            let noiseTimeSpeed = 0.05;
             let nx = noiseScale * x;
             let ny = noiseScale * y;
-            let nt = noiseScale * frameCount;
+            let nt = noiseTimeSpeed * frameCount;
 
             let c = noiseLevel * noise(nx, ny, nt);
 
@@ -26,10 +28,12 @@ function draw(){
                 noStroke();
                 let colorChoice = (random(0,1));
                 if (colorChoice < 0.6) {
-                    fill(210, 116, 174);
+                    fill(127, 176, 105); //green
                 } else {
-                    fill(231, 105, 33);
+                    fill(239, 71, 111); //red
                 }
+
+                //never touch circles
                 let distX = abs(mouseX - x);
                 let distY = abs(mouseY - y);
                 let xnew = x;
@@ -42,14 +46,14 @@ function draw(){
                     ynew += (dist_from_mouse * random(1,2)) * sign; 
                 }
                 if (distX > dist_from_mouse || distY > dist_from_mouse) {
-                    circle(x, y, 20);
+                    circle(x, y, stepSize);
                     circleCounter++;
                 }
             }
         }
     }
 
-    if (circleCounter >= 2000) {
+    if (circleCounter >= 500) {
         direction = -1;
     } else if (circleCounter <= 250) {
         direction = 1;
