@@ -108,6 +108,10 @@ body {
   color: var(--main-color);
 }
 
+body, .md-typeset {
+  font-family: 'PP Right Grotesk Text', sans-serif;
+}
+
 .md-typeset strong {
   color: var(--main-color);
 }
