@@ -1,4 +1,4 @@
-<iframe src="p5/sketch.html" width="800" height="300" style="border: 2px solid var(--main-orange)"></iframe>
+<iframe src="p5/sketch.html" width="800" height="400" style="border: none"></iframe>
 
 # Welcome to Design Ex Machina
 

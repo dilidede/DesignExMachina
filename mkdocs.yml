@@ -16,9 +16,11 @@ theme:
 #ALL THE SECTIONS HERE!!!
 nav:
   - Home: index.md
-  - Introduction: intro.md
-  - Getting Started: sec1.md
-  - Loops and Conditionals: sec2.md
+  - Introduction: 00intro.md
+  - Getting Started: 01gettingStarted.md
+  - Interaction: 02interaction.md
+  - Loops and Conditionals: 03loopsConds.md
+  - Integrating Artificial Intelligence: 04integratingAI.md
 
 markdown_extensions:
   - admonition

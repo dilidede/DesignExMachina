@@ -1,3 +1,5 @@
+<iframe src="../p5/gettingStarted.html" width="800" height="200" style="border: 2px solid var(--main-color)"></iframe>
+
 # Getting Started
 ## What is programming?
 
@@ -78,11 +80,11 @@ function draw() {
 If we try to run it, a simple gray square will appear on the side of the screen. What has happened? The instruction, called call, in the setup function was `createCanvas(400, 400)`, where `createCanvas` is the name of the command and the numbers inside the parentheses are the settings of our command. Almost every command in p5 will be followed by parentheses, which are filled with the precise settings, which are called arguments, that we need to give it. When we see (or write) nothing inside the parentheses it’s because we’re okay with the default settings it has, which are not shown. Attention though, not every function is able to work without explicit parameters. For example, `createCanvas` needs as parameters a width and height to function properly, if we just write `createCanvas()` the command will take as width and height 0, which means it will create a 0x0 px canvas, therefore a useless one. In our sample code both the height and width are defined to be 400, which explains the reason why our canvas is a square. Why the gray though?
 The second function of the program is draw, which contains a simple statement: `background(220)`. It’s telling the computer to draw the program with a specific color, and it can take different kinds of parameters. If we only write one number, we will be using a shade of gray, while if we write three numbers, those will be RGB values. In our case we only have a number as an argument, which means it’s taking 220 as the grayscale value for the background, this explains the gray color of the square.
 
-::: Summary
-Function: a command, it contains a series of instructions in the form of calls.
-Call: specific instruction to be executed
-Argument: specific settings of a command, contained in circle brackets. 
-:::
+!!! summary "Summary"
+
+    Function: a command, it contains a series of instructions in the form of calls. <br>
+    Call: specific instruction to be executed. <br>
+    Argument: specific settings of a command, contained in circle brackets. <br>
 
 Let’s try and make this more interesting. First, let's setup our background just after creating the canvas, without having to re-draw it at every frame. What to do now in the draw function? Try to run this code and to pass your mouse on the canvas:
 
@@ -198,10 +200,10 @@ As you can see, we declare a string by surrounding it with `‘’` characters. 
 
     **Common escape sequences:**
 
-    `\t` = tab
-    `\n` = new line
-    `\’` = ‘
-    `\”` = “
+    `\t` = tab <br>
+    `\n` = new line <br>
+    `\’` = ‘ <br>
+    `\”` = “ <br>
 
     **Useful calls:**
 
@@ -233,7 +235,7 @@ function setup(){
 
 ```
 
-If we wanted to easily resize our image and canvas, we might want to use the fourth and fifth unnecessary parameters of the ```image()``` call: the bottom right corner coordinates. For example we might edit our code this way:
+If we wanted to easily resize our image and canvas, we might want to use the fourth and fifth unnecessary parameters of the `image()` call: the bottom right corner coordinates. For example we might edit our code this way:
 
 ```javascript
 
@@ -249,6 +251,10 @@ function setup(){
 ```
 
 !!! exercises "Exercises"
-    1. Bla bla
-    2. Bla Bla
-    3. Bla
+    1. Write pseudocode to draw a traffic light with red, yellow, and green lights in the correct order vertically. <br>
+    *Tip*: Think of shapes, positions, and repetition.
+
+    2. Modify the sample p5.js sketch to create a canvas of size 600x300 and set the background to light gray and try to realise the traffic light in p5. <br>
+    *Tip*: Use `circle()` function.
+
+    3. 

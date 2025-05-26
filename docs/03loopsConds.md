@@ -51,8 +51,8 @@ So how would our chain pattern code look like in p5?
 Now, in your p5 programs it's very likeable you will need to loop through the whole canvas, and in this case a simple loop won't be enough, as you will require coordinates both for the x and the y. How to handle this case? Let's look at the code:
 
 ```javascript
-for (let x = 0; x < 2; x++) {
-  for (let y = 0; y < 2; y++) {
+for (let x = 0; x < 4; x++) {
+  for (let y = 0; y < 4; y++) {
 
   }
 }
@@ -60,7 +60,7 @@ for (let x = 0; x < 2; x++) {
 
 What is going on? The program enters in the first loop, then runs the second one until it doesn't meet anymore the condition (i.e. being less than nine), then goes back to the first loop in order to increment the x value and then it runs the second loop. This repeats until the first loop condition is valid. If this sounds a bit too confusing, let's look at it.
 
-<iframe src="/p5/nestedLoop.html" width="800" height="300" style="border: 2px solid var(--main-orange)"></iframe>
+<iframe src="../p5/nestedLoop.html" width="800" height="500" style="border: 2px solid var(--main-orange)"></iframe>
 
 
 ## Conditionals
@@ -136,7 +136,7 @@ if mouse is in the top third:
 	draw a circle where the mouse is
 ```
 
-Even though this might look complex at first, the basic logic is the same as the one we saw before, we just need one last piece of syntax: else if. This is how our conditional statement will look like: 
+Even though this might look complex at first, the basic logic is the same as the one we saw before, we just need one last piece of syntax: else if. This is how our conditional statement will look like::
 
 ```javascript
 //top third
@@ -199,10 +199,11 @@ Finally, let's look at our complete code.
 
 
 !!! exercises "Exercises"
-	1. 	Editing from the *02A* program from this chapter, make every second circle filled with red.
-		*Tip*: Use the remainder operation
-	2. Draw triangles in a row. Change the color of a triangle when the mouse is over it.
-	3. Draw a 5x5 grid of squares.
-		3.1. Try to alternate the square colors like in a chessboard
+	1. Draw triangles in a row. Change the color of a triangle when the mouse is over it.
+	2. Draw a 5x5 grid of squares.
+		2.1. Try to alternate the square colors like in a chessboard
 			*Tip*: Use nested loops.
+  3. 
+  4. Starting from the *02A* program from this chapter, make every second circle filled with red.
+		*Tip*: Use the remainder operation
 	
