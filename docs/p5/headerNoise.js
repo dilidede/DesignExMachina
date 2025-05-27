@@ -9,7 +9,7 @@ function setup() {
 }
 
 function draw(){
-    background(255)
+    background(255, 255, 250);
     noiseLevel += 0.3 * direction;
     circleCounter = 0
     let dist_from_mouse = 40;
