@@ -12,7 +12,7 @@
         <link rel="prev" href="../..">
       
       
-        <link rel="next" href="../01gettingStarted/">
+        <link rel="next" href="../gettingStarted/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -248,18 +248,17 @@
   
   
   
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../documentation/book/" class="md-tabs__link">
-          
+    <li class="md-tabs__item">
+      <a href="../../book/" class="md-tabs__link">
+        
   
+  
+    
   
   Documentation
 
-        </a>
-      </li>
-    
+      </a>
+    </li>
   
 
       
@@ -473,7 +472,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01gettingStarted/" class="md-nav__link">
+      <a href="../gettingStarted/" class="md-nav__link">
         
   
   
@@ -496,7 +495,30 @@
   
   
     <li class="md-nav__item">
-      <a href="../02loopsConds/" class="md-nav__link">
+      <a href="../canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Working on the canvas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loopsConds/" class="md-nav__link">
         
   
   
@@ -519,12 +541,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../03interaction/" class="md-nav__link">
+      <a href="../interaction/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Interaction
+    Interactive visuals
     
   </span>
   
@@ -542,12 +564,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../04integratingAI/" class="md-nav__link">
+      <a href="../integratingAI/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     Integrating AI
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Further resources
     
   </span>
   
@@ -642,49 +687,8 @@
   
   
   
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    Documentation
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Documentation
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../../documentation/book/" class="md-nav__link">
+      <a href="../../book/" class="md-nav__link">
         
   
   
@@ -695,14 +699,6 @@
   
 
       </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -843,7 +839,7 @@
 <p>The choice of <strong>p5.js</strong> is mainly due to being open-source and its accessibility, as any project can be run on the web editor without needing to download anything. ChatGPT isn't open-source, but even though paid subscription is available, it still garantees a free use that is perfectly suitable for our needs. While on image generation, examples will be presented both with <strong>DrawThings AI</strong>, a free tool for MacOS and iOS, but also with <em>*</em>Midjourney**, a paid subscription for all operating systems and platforms.</p>
 <p>Before even beginning to put our hands into work, it's good to ask ourselves something: if both computational graphics and generative artificial intelligence can "create" images, why should we prefer one over each other? A good rule of thumb can be that any time you can do something with classic algorithms, it's better than to use machine learning ones. But let's take a step back, what even is an algorithm?</p>
 <h2 id="algorithms">Algorithms</h2>
-<p>Simply put, an algorithm is <strong>a set of rigorous instructions</strong> to be followed in problem solving. In our case, the problem is usually the display of a graphic or, for example, how to manage a specific interaction. They also are the very foundation of machine learning, which is a way for computers to learn from given data and improve overtime without needing specific programming for every task. For a more specific explanation you can check the <a href="../04integratingAI/">Blablabus</a> section.</p>
+<p>Simply put, an algorithm is <strong>a set of rigorous instructions</strong> to be followed in problem solving. In our case, the problem is usually the display of a graphic or, for example, how to manage a specific interaction. They also are the very foundation of machine learning, which is a way for computers to learn from given data and improve overtime without needing specific programming for every task. For a more specific explanation you can check the <a href="04integratingAI.md">Blablabus</a> section.</p>
 <p>A very common example for basic <strong>algorithmic thinking</strong> is the recipe example: when cooking a new recipe we follow specific instructions and steps, and if we follow them perfectly we end up getting a delicious perfect dish. In a similar way, algorithms are instructions we give to the computer in order to perform specific task and obtain specific results. </p>
 <p>It can be understood by taking the example of cooking a new recipe. To cook a new recipe, one reads the instructions and steps and executes them one by one, in the given sequence. The result thus obtained is the new dish is cooked perfectly. Every time you use your phone, computer, laptop, or calculator you are using Algorithms. Similarly, algorithms help to do a task in programming to get the expected output. When it comes to programming, even in our relatively simple applications we need to develop <strong>algorithmic thinking</strong>, which means being able to think in a systematic and structured way, just as we need to do when programming or solving problems. To do so, there are many different approaches that are quite useful: for example <strong>decomposition</strong>, which envolves breaking down a problem into smaller and thus more manageable parts, but also <strong>pattern recognition</strong>, which means trying to identify trends within a problem in order to make it easier to solve it. Finally, we will need to develop a series of ordered steps to solve the problem. </p>
 <h2 id="merging-generative-ai-and-computational-graphics">Merging Generative AI and Computational Graphics</h2>

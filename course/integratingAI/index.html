@@ -1,0 +1,903 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../interaction/">
+      
+      
+        <link rel="next" href="../resources/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Integrating AI - Design ex Machina</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--info:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2016%2016%22%3E%3Cpath%20d%3D%22M0%208a8%208%200%201%201%2016%200A8%208%200%200%201%200%208m8-6.5a6.5%206.5%200%201%200%200%2013%206.5%206.5%200%200%200%200-13M6.5%207.75A.75.75%200%200%201%207.25%207h1a.75.75%200%200%201%20.75.75v2.75h.25a.75.75%200%200%201%200%201.5h-2a.75.75%200%200%201%200-1.5h.25v-2h-.25a.75.75%200%200%201-.75-.75M8%206a1%201%200%201%201%200-2%201%201%200%200%201%200%202%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="dem" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#what-is-artificial-intelligence" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Design ex Machina" class="md-header__button md-logo" aria-label="Design ex Machina" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Design ex Machina
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Integrating AI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../00intro/" class="md-tabs__link">
+          
+  
+  
+  The course
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../workshop/overview/" class="md-tabs__link">
+          
+  
+  
+  The workshop
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../book/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Documentation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../me/aboutme/" class="md-tabs__link">
+          
+  
+  
+  About me
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Design ex Machina" class="md-nav__button md-logo" aria-label="Design ex Machina" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Design ex Machina
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    The course
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            The course
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00intro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introduction
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gettingStarted/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Working on the canvas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../loopsConds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Loops and Conditionals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../interaction/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interactive visuals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Integrating AI
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integrating AI
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-generative-models-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do generative models work?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Further resources
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    The workshop
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            The workshop
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../workshop/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../book/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    About me
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            About me
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../me/aboutme/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About me
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-do-generative-models-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      How do generative models work?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="what-is-artificial-intelligence">What is Artificial Intelligence?</h1>
+<p>Before delving into how to properly use AI for writing code, it is important to understand what this technology is and how does it work. However, please remember that everything is going to be <strong>heavily simplified</strong> and is not meant to be an exhaustive explanation on AI. </p>
+<p>Artificial Intelligence can be described as an algorithm that tries to simulate human intelligence. While that may sound abstract, the core idea is simple: humans learn from <strong>observing things, recognizing patterns and apply what we learned</strong>. In a way, AI does the same thing.</p>
+<p>There are two main approaches that allow computer scientists to create these AI: <strong>symbolic AI</strong> (also called "Good Old Fashioned Artificial Intelligence" or GOFAI), and <strong>connectionist AI</strong> (or more commonly, Neural Networks).
+As the alternative name suggests, <strong>symbolic AI</strong> is the older one, and works through <strong>explicit rules</strong>, similar to traditional programming. For example, if we write a rule that says "If an animal has four legs, a tail, and it barks, then it’s a dog", the system will be able to recognize dogs within a set of images. However, it is more prone to errors, as for example it might not be able to correctly distinguish a dog if the input featured a dressed-up dog.</p>
+<p>On the other hand, connectionist AI doesn't rely on rules, but rather on <strong>data</strong>. What does this mean? If we talk about an AI that generates images from a written prompt, the <strong>neural network</strong> is fed with millions of images, each labeled with the elements present in the image. This way, the network doesn't know for example <strong>exactly what makes a dog a dog</strong>, but rather internalizes its features. If we instead think of Large Language Models, the ones that have text both as input and output, they are given millions of texts to "read" and slowly learn how does a sentence look like, how does grammar work and so on. </p>
+<p>There is not an approach of AI that works for every given situation, different types serve different purposes. Some models are designed to classify things (discriminative models), others are built to generate content, and others for decision-making.</p>
+<p>Although AI in creative practices has exploded in the recent years, it has been long present in this field. For instance, back in the 1970s the artist Harold Cohen created <strong>AARON</strong>, a program that was able to draw without specific instructions on what to draw. At the beginning it was only able to create abstract images, but by 1990s it was able to draw humans and even color them.</p>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/IPczQgCuOOc?si=T-vks129-YoCskp9" title="Harold Cohen and AARON (1987)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<p>As AI models have become more advanced, they’ve also become more flexible. There are <strong>unimodal</strong> generative AIs that work with just one type of data, such as text-to-text or image-to-image. Others are <strong>multimodal</strong>, meaning they can understand and produce across different formats: text-to-image, image-to-sound, image-to-text, and so on. These models are behind tools like Midjourney, DALL·E, and Adobe Firefly, which allow users to describe a scene or concept in natural language and receive a visual interpretation in return.</p>
+<h2 id="how-do-generative-models-work">How do generative models work?</h2>
+<p>Generative models as we know them base themselves on <strong>Generative Adversarial Networks</strong> (GANs), a technology introduced in 2014 by Ian Goodfellow. Although the name feels a bit complicated, the idea is simple: we have two models involved, one that generates fake data (generative model) and another that tries to detect whether the data is real or not (discriminative model). At first the discriminative one will recognize the fake data quite often, but as time passes, the generative model will learn how to get past it. In simpler words, you can see the discriminative model as a bouncer that only allows cats to enter and the generative model as someone who tries to trick the bouncer into letting them enter with a cat costume. At first the bouncer will easily recognize that the "cat" is not real, but as time passes the generative model gets better and better to trick the discriminator, until it can't tell the fake cat costume from a real cat anymore.</p>
+<p>If this is how the generative models get trained to be as convincing as possible, how do they actually generate images or text?</p>
+<p>Generative models use the connectionist approach, which means that they get trained by analysing millions of data, learning how do things work and thus how to recreate them. As the model is influenced by millions of images or texts, it <strong>should not be able to recreate a specific thing from its training data</strong>, right? It should be like that, but unfortunately it does not always work like this. Since the most popular models are usually trained on data found on the <strong>internet</strong>, it might happen that a single text or image is not present just once, but two, five, ten, even hundreds of times. Generative models work essentially with <strong>statistics</strong>, which means that they take decisions based on how should things <strong>probably</strong> be.
+Because of these inherent characteristics of generative models, it can happen that a specific thing is present so many times in the training data that the model accidentally recreates it.</p>
+<p>However, this is not the only problem that these generative models can have. While a wrongly generated image is easier to tell apart, as it may include unrealistic looking elements, unfortunately the same cannot be said on wrongly generated text. The statistical nature of large language models leads to the risk of <strong>hallucinations</strong>, as the model will generate what it assumes should probably there, but the information might not be true. This is important not only when we take the risk of using LLMs to get information, but also when we use it to <strong>write code</strong>, since the model will always be confident that its solutions work, even when they don't.</p>
+<p>It's exactly because of this reason that it's important to learn the basics of programming in order to be able to use LLMs for writing code.</p>
+<h1 id="ai-as-a-code-writing-assistant">AI as a code writing assistant</h1>
+<p>Before even starting to learn how to best use LLMs to write code, the selection of the tool is as important as the action itself. Mantaining tge open-source and free resources philosophy of this project, we also recommend the use of an <strong>open-source LLM</strong>. Fortunately, of the LLMs that are good to write code, one of the best ones also happens to be open-source:<a href="https://editor.p5js.org/dide_dd/sketches/wqZ_Qh0Ud" target="_blank">DeepSeek</a>.</p>
+<p>The approach proposed is obviously appliable to virtually any LLM, although you should keep in mind that you can achieve better results when you use the <strong>"deep think" option</strong>, whose name can be different based on the model used. These results tend to be better because the LLM generates a provisional text through which it "thinks" before giving you the final response, often leading in our case to better code writing.</p>
+<p>That said, the way we use these tools matters just as much as which ones you use. First, it's recommendable to <strong>write your prompts in English</strong>, even if it's not your first language. You can rely on translators like <a href="https://translate.google.com/" target="_blank">Google's</a> or  <a href="https://www.deepl.com/en/translator" target="_blank">DeepL</a> if you are not confident with your English. This is because these models have been trained primarily on English data, documentation, and questions, and the quality of the results drops noticeably when using other languages.</p>
+<p>But relying on an LLM doesn’t mean you can stop thinking algorithmically. In fact, having a basic mental model of what you want to achieve, just as you would when writing code yourself, consistently leads to better results. You don’t need to know the full syntax or exact details of what functions and calls do you need, but having a clear idea of how the code should work is extremely important. This is because you need to give these clear explanations as prompts. If your prompt is vague or underspecified, they’ll often make assumptions without explicitly saying so. This can result in code that compiles, runs, and looks correct—but doesn’t do what you actually needed.
+Exactly like when you explain a project to a friend that knows nothing about it, you shouldn't give for granted the specifics. For instance, a common error is to just ask for a program, but what you want is for instance a p5 program, or a JavaScript program for Indesign, and so on and so forth.</p>
+<p>Whenever you ask the model for help, whether you’re writing a function, fixing a bug, or trying something you’ve never done before you should sketch out your goal, or at least have a clear idea of what it is. What are the inputs and outputs? What steps need to happen in between? What edge cases should be considered? You don't need to be formal or use pseudo-code, just be clear in the prompt you give. It might also be useful to explain your idea to the model and ask for a steps breakdown, rather than the full code immediatly.
+Don't think of the LLM as a magic wand but as a very fast and overconfident collaborator: <strong>their work is good only if your prompt is good</strong>, otherwise it will give you results that they consider perfect, even when they are not.</p>
+<p>Another useful tip for learning programming through AI can be to ask the LLM clear explanation of code and of anything that isn't immediately clear to you.</p>
+<p>The core idea is that you should use LLMs to accelerate your learning and speed-up long interative processes, but <strong>never guide the project itself</strong>. They can help you achieve results that exceed your current skill level, but they cannot replace reasoning. </p>
+<h2 id="not-just-p5-adobe-programs-and-so-much-more">Not just p5, Adobe programs and so much more</h2>
+<p>The vast majority of designers works everyday with Adobe programs, </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer style="padding-left: 20px;" class="md-footer">
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner" style="display: flex; justify-content: space-between; align-items: center;">
+      <p>
+        "Design Ex Machina" by Diletta Maria Dell'Utri <br>
+        Prof. Antonino Benincasa and Rocco Lorenzo Modugno <br>
+        Free University of Bolzano, Faculty of Design and Art
+      </p>
+      <p style="margin-right: 20px;">
+        Made with Materials for MkDocs
+      </p>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+        <script src="../../docs/js/logo-redirect.js"></script>
+      
+    
+  </body>
+</html>
