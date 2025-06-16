@@ -4,23 +4,16 @@ theme:
   name: material
   palette:
     scheme: dem
-  custom_dir: overrides
+  custom_dir: config/overrides
   features:
     - content.code.annotate
+    - navigation.tabs
   icon:
     admonition:
       info: octicons/info-16
-  favicon: images/favicon.png
-  logo: images/logo.png
-
-#ALL THE SECTIONS HERE!!!
-nav:
-  - Home: index.md
-  - Introduction: 00intro.md
-  - Getting Started: 01gettingStarted.md
-  - Interaction: 02interaction.md
-  - Loops and Conditionals: 03loopsConds.md
-  - Integrating Artificial Intelligence: 04integratingAI.md
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo.png
+  language: en
 
 markdown_extensions:
   - admonition
@@ -33,7 +26,26 @@ markdown_extensions:
 
 extra_css:
   - assets/stylesheets/extra.css
-  - docs/style.css
+  - style.css
 
-extra_javascript:
-  - icons/historybit.svg
+extra_javascript: 
+  - docs/js/logo-redirect.js
+
+plugins:
+  - search
+
+
+nav:
+    - Home: index.md
+    - The course:
+      - Introduction: course/00intro.md
+      - Getting Started: course/01gettingStarted.md
+      - Loops and Conditionals: course/02loopsConds.md
+      - Interaction: course/03interaction.md
+      - Integrating AI: course/04integratingAI.md
+    - The workshop:
+      - Overview: workshop/overview.md
+    - Documentation:
+      - Documentation: documentation/book.md
+    - About me:
+      - About me: me/aboutme.md

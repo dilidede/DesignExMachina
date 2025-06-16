@@ -1,4 +1,4 @@
-<iframe src="../p5/gettingStarted.html" width="800" height="200" style="border: 2px solid var(--main-color)"></iframe>
+<iframe src="/p5/gettingStarted.html" width="800" height="200" style="border: 2px solid var(--main-color)"></iframe>
 
 # Getting Started
 ## What is programming?
@@ -56,7 +56,7 @@ Compared to humans, computers are not as bright as us, and what may seem obvious
 
 Usually any library comes with a **documentation**, which explains what every function does and how to use it. It is a crucial resource to help you implement programs, as on p5 website they are not only explained, but everything comes with a series of examples. P5 does not only that, it also offers a web-based interface to allow you to immediately start coding without needing to download anything, you just need to visit [editor.p5js.org](https://editor.p5js.org/) in order to start working. This will be our workspace throughout the book, let’s take a look.
 
-![p5 UI](images/p5_ui.png)
+![p5 UI](/images/p5_ui.png)
 
 At the top of the screen, we find two simple buttons that allow us to play or stop our program. On the left side we find the **main code editor** which displays by default the *sketch.js* file. Below the code editor, there's the **console** where messages or error feedbacks will appear. This is going to be extremely useful when troubleshooting our programs. Finally, on the right side of the screen there's the preview area, where the output of the code will be run and be interacted with.
 
