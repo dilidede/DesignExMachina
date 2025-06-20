@@ -1,4 +1,4 @@
-<iframe src="/p5/gettingStarted.html" width="100%" height="200" style="border: 2px solid var(--main-color)"></iframe>
+<iframe src="./p5/gettingStarted.html" width="100%" height="200" style="border: 2px solid var(--main-color)"></iframe>
 
 # Getting Started
 ## What is programming?

@@ -1,4 +1,4 @@
-# What is Artificial Intelligence?
+## What is Artificial Intelligence?
 
 Before delving into how to properly use AI for writing code, it is important to understand what this technology is and how does it work. However, please remember that everything is going to be **heavily simplified** and is not meant to be an exhaustive explanation on AI. 
 
@@ -30,7 +30,7 @@ However, this is not the only problem that these generative models can have. Whi
 
 It's exactly because of this reason that it's important to learn the basics of programming in order to be able to use LLMs for writing code.
 
-# AI as a code writing assistant
+## AI as a code writing assistant
 
 Before even starting to learn how to best use LLMs to write code, the selection of the tool is as important as the action itself. Mantaining tge open-source and free resources philosophy of this project, we also recommend the use of an **open-source LLM**. Fortunately, of the LLMs that are good to write code, one of the best ones also happens to be open-source:<a href="https://editor.p5js.org/dide_dd/sketches/wqZ_Qh0Ud" target="_blank">DeepSeek</a>.
 

@@ -60,7 +60,7 @@ for (let x = 0; x < 4; x++) {
 
 What is going on? The program enters in the first loop, then runs the second one until it doesn't meet anymore the condition (i.e. being less than nine), then goes back to the first loop in order to increment the x value and then it runs the second loop. This repeats until the first loop condition is valid. If this sounds a bit too confusing, let's look at it.
 
-<iframe src="/p5/nestedLoop.html" width="100%" height="500px" style="border: 2px solid var(--main-orange)"></iframe>
+<iframe src="./p5/nestedLoop.html" width="100%" height="500px" style="border: 2px solid var(--main-orange)"></iframe>
 <small> <a href="https://editor.p5js.org/dide_dd/sketches/NcQTt17Ut" target="_blank">p5.js code here!</a> </small>
 
 

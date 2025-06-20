@@ -4,7 +4,7 @@ hide:
     - toc
 ---
 
-<iframe src="/p5/sketch.html" width="2000" height="500" style="border: none"></iframe>
+<iframe src="./p5/sketch.html" width="2000" height="500" style="border: none"></iframe>
 <small> <a href="https://editor.p5js.org/dide_dd/sketches/0tQ9UNV4p" target="_blank">p5.js code here!</a> </small>
 
 # Welcome to Design Ex Machina

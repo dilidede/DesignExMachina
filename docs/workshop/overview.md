@@ -10,8 +10,8 @@ In this page you can browse a selection of programs developed by students during
 
 ## Webcam Filters
 
-<iframe src="/p5/webcamGrid.html" style="width: 100%; height: 700px; border: none;"></iframe>
+<iframe src="./p5/webcamGrid.html" style="width: 100%; height: 700px; border: none;"></iframe>
 
 ## Animations
 
-<iframe src="/p5/flockGrid.html" style="width: 100%; height: 700px; border: none;"></iframe>
+<iframe src="./p5/flockGrid.html" style="width: 100%; height: 700px; border: none;"></iframe>
