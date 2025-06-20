@@ -490,8 +490,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -524,8 +522,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -534,9 +530,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-artificial-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Artificial Intelligence?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-generative-models-work" class="md-nav__link">
     <span class="md-ellipsis">
       How do generative models work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-as-a-code-writing-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI as a code writing assistant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-just-p5-adobe-programs-and-so-much-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not just p5, Adobe programs and so much more
     </span>
   </a>
   
@@ -691,8 +714,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -701,9 +722,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#what-is-artificial-intelligence" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is Artificial Intelligence?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#how-do-generative-models-work" class="md-nav__link">
     <span class="md-ellipsis">
       How do generative models work?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-as-a-code-writing-assistant" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI as a code writing assistant
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-just-p5-adobe-programs-and-so-much-more" class="md-nav__link">
+    <span class="md-ellipsis">
+      Not just p5, Adobe programs and so much more
     </span>
   </a>
   
@@ -725,7 +773,9 @@
 
 
 
-<h1 id="what-is-artificial-intelligence">What is Artificial Intelligence?</h1>
+  <h1>Integrating AI</h1>
+
+<h2 id="what-is-artificial-intelligence">What is Artificial Intelligence?</h2>
 <p>Before delving into how to properly use AI for writing code, it is important to understand what this technology is and how does it work. However, please remember that everything is going to be <strong>heavily simplified</strong> and is not meant to be an exhaustive explanation on AI. </p>
 <p>Artificial Intelligence can be described as an algorithm that tries to simulate human intelligence. While that may sound abstract, the core idea is simple: humans learn from <strong>observing things, recognizing patterns and apply what we learned</strong>. In a way, AI does the same thing.</p>
 <p>There are two main approaches that allow computer scientists to create these AI: <strong>symbolic AI</strong> (also called "Good Old Fashioned Artificial Intelligence" or GOFAI), and <strong>connectionist AI</strong> (or more commonly, Neural Networks).
@@ -743,7 +793,7 @@ As the alternative name suggests, <strong>symbolic AI</strong> is the older one,
 Because of these inherent characteristics of generative models, it can happen that a specific thing is present so many times in the training data that the model accidentally recreates it.</p>
 <p>However, this is not the only problem that these generative models can have. While a wrongly generated image is easier to tell apart, as it may include unrealistic looking elements, unfortunately the same cannot be said on wrongly generated text. The statistical nature of large language models leads to the risk of <strong>hallucinations</strong>, as the model will generate what it assumes should probably there, but the information might not be true. This is important not only when we take the risk of using LLMs to get information, but also when we use it to <strong>write code</strong>, since the model will always be confident that its solutions work, even when they don't.</p>
 <p>It's exactly because of this reason that it's important to learn the basics of programming in order to be able to use LLMs for writing code.</p>
-<h1 id="ai-as-a-code-writing-assistant">AI as a code writing assistant</h1>
+<h2 id="ai-as-a-code-writing-assistant">AI as a code writing assistant</h2>
 <p>Before even starting to learn how to best use LLMs to write code, the selection of the tool is as important as the action itself. Mantaining tge open-source and free resources philosophy of this project, we also recommend the use of an <strong>open-source LLM</strong>. Fortunately, of the LLMs that are good to write code, one of the best ones also happens to be open-source:<a href="https://editor.p5js.org/dide_dd/sketches/wqZ_Qh0Ud" target="_blank">DeepSeek</a>.</p>
 <p>The approach proposed is obviously appliable to virtually any LLM, although you should keep in mind that you can achieve better results when you use the <strong>"deep think" option</strong>, whose name can be different based on the model used. These results tend to be better because the LLM generates a provisional text through which it "thinks" before giving you the final response, often leading in our case to better code writing.</p>
 <p>That said, the way we use these tools matters just as much as which ones you use. First, it's recommendable to <strong>write your prompts in English</strong>, even if it's not your first language. You can rely on translators like <a href="https://translate.google.com/" target="_blank">Google's</a> or  <a href="https://www.deepl.com/en/translator" target="_blank">DeepL</a> if you are not confident with your English. This is because these models have been trained primarily on English data, documentation, and questions, and the quality of the results drops noticeably when using other languages.</p>
