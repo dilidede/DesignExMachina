@@ -8,6 +8,7 @@ function setup() {
   capture.hide();
   noStroke();
   colorMode(HSB, 360, 100, 100, 100);
+  frameRate(12);
 }
 
 function draw() {

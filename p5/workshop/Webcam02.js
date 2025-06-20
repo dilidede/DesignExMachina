@@ -8,6 +8,7 @@ function setup() {
   video.size(width / currentPixelSize, height / currentPixelSize);
   video.hide();
   noStroke();
+  frameRate(12);
 }
 
 function draw() {

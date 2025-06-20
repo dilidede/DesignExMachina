@@ -12,6 +12,7 @@ function setup() {
   video.hide();
 
   initializePoints();
+  frameRate(12);
 }
 
 function initializePoints() {

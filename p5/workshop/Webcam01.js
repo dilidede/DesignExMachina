@@ -5,6 +5,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   video = createCapture(VIDEO);
   video.size(640, 480);
+  frameRate(12);
   video.hide();
   textSize(12);
   fill(255);

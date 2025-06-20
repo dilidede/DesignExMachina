@@ -8,6 +8,7 @@ function setup() {
   video.size(80, 60); // risoluzione ridotta per performance
   video.hide();
   background(0);
+  frameRate(12);
 }
 
 function draw() {
