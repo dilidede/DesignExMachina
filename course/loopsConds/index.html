@@ -262,26 +262,6 @@
   
 
       
-        
-  
-  
-  
-  
-    
-    
-      <li class="md-tabs__item">
-        <a href="../../me/aboutme/" class="md-tabs__link">
-          
-  
-  
-  About me
-
-        </a>
-      </li>
-    
-  
-
-      
     </ul>
   </div>
 </nav>
@@ -663,7 +643,7 @@
   
   
   <span class="md-ellipsis">
-    Overview
+    The workshop
     
   </span>
   
@@ -699,77 +679,6 @@
   
 
       </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
-            
-  
-  
-  <span class="md-ellipsis">
-    About me
-    
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
-            <span class="md-nav__icon md-icon"></span>
-            About me
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../me/aboutme/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    About me
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
     </li>
   
 
@@ -864,13 +773,13 @@ Finally, let's look at something quite strange at first: </p>
 <p>Now, in your p5 programs it's very likeable you will need to loop through the whole canvas, and in this case a simple loop won't be enough, as you will require coordinates both for the x and the y. How to handle this case? Let's look at the code:</p>
 <div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span><span class="nx">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">4</span><span class="p">;</span><span class="w"> </span><span class="nx">y</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-
+<span class="w">    </span><span class="c1">//action goes here</span>
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>What is going on? The program enters in the first loop, then runs the second one until it doesn't meet anymore the condition (i.e. being less than nine), then goes back to the first loop in order to increment the x value and then it runs the second loop. This repeats until the first loop condition is valid. If this sounds a bit too confusing, let's look at it.</p>
-<iframe src="../p5/nestedLoop.html" width="100%" height="500px" style="border: 2px solid var(--main-orange)"></iframe>
-
+<iframe src="/p5/nestedLoop.html" width="100%" height="500px" style="border: 2px solid var(--main-orange)"></iframe>
+<p><small> <a href="https://editor.p5js.org/dide_dd/sketches/NcQTt17Ut" target="_blank">p5.js code here!</a> </small></p>
 <h2 id="conditionals">Conditionals</h2>
 <p>Conditionals are another fundamental concept in programming, as they allow the computer to executer different actions depending on whether a condition is true or false.</p>
 <p>Thanks to this structure, we can make our program perform a certain action <strong>only if</strong> a certain circumstance apply. For example we can take our initial code that created circles wherever our mouse was and make it so that the moment our mouse goes into the bottom half of the canvas, all the circles will be red. In pseudocode, our logic would look like this:</p>

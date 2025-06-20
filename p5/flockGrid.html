@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>p5 Sketch Grid with Captions</title>
+  <style>
+    body {
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 320px); /* Slightly taller to fit caption */
+      gap: 10px;
+      height: 100vh;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+    iframe {
+      flex-grow: 1;
+      width: 100%;
+      border: none;
+      display: block;
+    }
+    .caption {
+      padding: 5px 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #000000;
+      background: #ffffff;
+      user-select: none;
+      font-family: 'PP Right Grotesk Text', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <iframe src="/p5/flock/flock01.html"></iframe>
+    <div class="caption">Beatrice M.</div>
+  </div>
+  <div class="container">
+    <iframe src="/p5/flock/flock02.html"></iframe>
+    <div class="caption">Tommaso P.</div>
+  </div>
+  <div class="container">
+    <iframe src="/p5/flock/flock03.html"></iframe>
+    <div class="caption">Beatrice M.</div>
+  </div>
+  <div class="container">
+    <iframe src="/p5/flock/flock04.html"></iframe>
+    <div class="caption">Giorgia G.</div>
+  </div>
+  <div class="container">
+    <iframe src="/p5/flock/flock05.html"></iframe>
+    <div class="caption">Federico P.</div>
+  </div>
+  <div class="container">
+    <iframe src="/p5/flock/flock06.html"></iframe>
+    <div class="caption">Josh C.</div>
+  </div>
+</body>
+</html>
