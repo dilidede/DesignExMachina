@@ -5,6 +5,7 @@ hide:
 ---
 
 <iframe src="/p5/sketch.html" width="2000" height="500" style="border: none"></iframe>
+<small> <a href="https://editor.p5js.org/dide_dd/sketches/0tQ9UNV4p" target="_blank">p5.js code here!</a> </small>
 
 # Welcome to Design Ex Machina
 
@@ -18,10 +19,10 @@ Whether novice or inquisitive designer wanting to extend your toolkit, this site
 Start with basics: <code>setup()</code>, <code>draw()</code>, shapes, color, and text. <br>
 Proceed to loops, conditionals, and input elements like mouse, keyboard, and webcam. <br>
 Discover how to collaborate with <strong>Large Language Models</strong> (LLMs) not just as coding assistants but as creative partners. <br>
-All code examples execute directly in the browser. No installation required.
+All code examples execute directly in the browser. No installation required. <br> <br>
+<small> <a href="https://editor.p5js.org/dide_dd/sketches/0tQ9UNV4p" target="_blank">p5.js code here!</a> </small>
   </p>
 </div>
-
 
 ## The Manual
 

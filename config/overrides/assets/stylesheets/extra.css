@@ -78,6 +78,11 @@
   color: var(--main);
 }
 
+md-content .md-typeset small {
+   font-family: 'PP Right Grotesk Text', sans-serif;
+   font-size: 8px;
+}
+
 .md-typeset strong {
   color: var(--main-red);
 }

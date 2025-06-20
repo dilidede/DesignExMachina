@@ -5,7 +5,7 @@ Now that we have the basics clear, it’s time to delve into two of the most imp
 Before delving into the topic, let's look at **operations**. They are basic actions we can perform both in simple mathematics and with computers, where the two most obvious ones are `+` and `-`, which are unsurprisingly "add" and "subtract". We then have `*` for multiplications and `/` for divisions, but here comes a twist. Just as in elementary school we learnt about the remainder of a division, we also have in programming a way to compute it: the **remainder operation** `%`. This operation computes the remainder of a division, so for example if we calculated "13/3" p5 would round the result to 4, while "13%3" would output "1", since "4*3" is 12 and "13-12" is 1.
 Finally, let's look at something quite strange at first: 
 
-<iframe src="https://editor.p5js.org/dide_dd/sketches/4D2lw573N" width="800" height="400" frameborder="0"></iframe>
+<iframe src="https://editor.p5js.org/dide_dd/sketches/4D2lw573N" width="100%" height="400" frameborder="0"></iframe>
 
 
 How can position be equal to itself plus one? As we saw in the last section, "position" is a variable that holds a value and writing `position = position + 1` is a way to update that value. Therefore, if initially position equals to 20, after the operation it will equal to "20 + 1". Since, as we've seen, the `draw()` function reruns at every frame, the circle will be redrawn at its new position every frame, therefore creating our simple animation. This increase operation is very useful in programming, especially in loops, just as we will see now. 
@@ -46,21 +46,22 @@ Here we declared the counter variable with the number 0, instructed the computer
 
 So how would our chain pattern code look like in p5? 
 
-<iframe src="https://editor.p5js.org/dide_dd/sketches/R0K9LWHj_" width="800px" height="400px"></iframe>
+<iframe src="https://editor.p5js.org/dide_dd/sketches/R0K9LWHj_" width="100%" height="400px"></iframe>
 
 Now, in your p5 programs it's very likeable you will need to loop through the whole canvas, and in this case a simple loop won't be enough, as you will require coordinates both for the x and the y. How to handle this case? Let's look at the code:
 
 ```javascript
 for (let x = 0; x < 4; x++) {
   for (let y = 0; y < 4; y++) {
-
+    //action goes here
   }
 }
 ```
 
 What is going on? The program enters in the first loop, then runs the second one until it doesn't meet anymore the condition (i.e. being less than nine), then goes back to the first loop in order to increment the x value and then it runs the second loop. This repeats until the first loop condition is valid. If this sounds a bit too confusing, let's look at it.
 
-<iframe src="../p5/nestedLoop.html" width="800" height="500" style="border: 2px solid var(--main-orange)"></iframe>
+<iframe src="/p5/nestedLoop.html" width="100%" height="500px" style="border: 2px solid var(--main-orange)"></iframe>
+<small> <a href="https://editor.p5js.org/dide_dd/sketches/NcQTt17Ut" target="_blank">p5.js code here!</a> </small>
 
 
 ## Conditionals
@@ -119,7 +120,7 @@ if (/*condition*/){
 
 So this is how our code will finally look like:
 
-<iframe src="https://editor.p5js.org/dide_dd/sketches/w4wpK3wAE" width="800px" height="400px"></iframe>
+<iframe src="https://editor.p5js.org/dide_dd/sketches/w4wpK3wAE" width="100%" height="400px"></iframe>
 
 In this program we defined an action for our program to do in the eventuality that the if condition didn’t apply, and we did it through the “else” statement. However, what if we didn’t have just two conditions but more? For example that our circles assumed a different color based on the third of the canvas the mouse found itself in?
 
@@ -195,7 +196,7 @@ This kind of situation requires us to introduce two new symbols: `&&` and `||`. 
 
 Finally, let's look at our complete code.
 
-<iframe src="https://editor.p5js.org/dide_dd/sketches/d0c2s7HxK" width="800px" height="600px"></iframe>
+<iframe src="https://editor.p5js.org/dide_dd/sketches/d0c2s7HxK" width="100%" height="600px"></iframe>
 
 
 !!! exercises "Exercises"

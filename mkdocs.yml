@@ -39,13 +39,12 @@ nav:
     - Home: index.md
     - The course:
       - Introduction: course/00intro.md
-      - Getting Started: course/01gettingStarted.md
-      - Loops and Conditionals: course/02loopsConds.md
-      - Interaction: course/03interaction.md
-      - Integrating AI: course/04integratingAI.md
+      - Getting Started: course/gettingStarted.md
+      - Working on the canvas: course/canvas.md
+      - Loops and Conditionals: course/loopsConds.md
+      - Interactive visuals: course/interaction.md
+      - Integrating AI: course/integratingAI.md
+      - Further resources: course/resources.md
     - The workshop:
-      - Overview: workshop/overview.md
-    - Documentation:
-      - Documentation: documentation/book.md
-    - About me:
-      - About me: me/aboutme.md
+      - The workshop: workshop/overview.md
+    - Documentation: book.md
