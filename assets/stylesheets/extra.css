@@ -80,11 +80,35 @@
 
 md-content .md-typeset small {
    font-family: 'PP Right Grotesk Text', sans-serif;
+   font-weight: 500;
    font-size: 8px;
 }
 
 .md-typeset strong {
   color: var(--main-red);
+}
+
+.md-typeset a {
+  color: var(--main);
+}
+
+.md-nav__item .md-nav__link--active {
+  color: var(--main-red) !important;
+  font-weight: 600;
+}
+
+.md-nav a:hover {
+  color: var(--main-red);
+}
+
+.md-nav__link:hover {
+  color: var(--main-red) !important;
+}
+
+/* Active item hover */
+.md-nav__link--active:hover {
+  color: var(--main-red) !important;
+  font-weight: 600;
 }
 
 /* Remove icon for Exercises */
